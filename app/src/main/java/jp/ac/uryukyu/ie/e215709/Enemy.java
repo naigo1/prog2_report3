@@ -21,39 +21,7 @@ public class Enemy {
      * @param attack モンスターの攻撃力
      */
     
-     public String getName(){
-         return this.name;
-     }
-
-     public int getHitPoint(){
-        return this.hitPoint;
-    }
-
-    public int getAttack(){
-        return this.attack;
-    }
-
-    public boolean getDead(){
-        return this.dead;
-    }
-
-    public void setName(String name){
-        this.name = name;
-    }
-
-    public void setHitPoint(int hitPoint){
-         this.hitPoint = hitPoint;
-    }
-
-    public void setAttack(int attack){
-         this.attack = attack;
-    }
-
-    public void setDead(boolean dead){
-         this.dead = dead;
-    }
-
-     public Enemy (String name, int maximumHP, int attack) {
+    public Enemy (String name, int maximumHP, int attack) {
         this.name = name;
         hitPoint = maximumHP;
         this.attack = attack;
@@ -61,6 +29,64 @@ public class Enemy {
         System.out.printf("%sのHPは%d。攻撃力は%dです。\n", name, maximumHP, attack);
     }
 
+    /**
+     * 名前を参照するメソッド。
+     * @return　name モンスター名。
+     */ 
+    public String getName(){
+         return this.name;
+     }
+     /**
+      * hitPointを参照するメソッド。
+      * @return　hitPoint モンスターのHP.
+      */
+     public int getHitPoint(){
+        return this.hitPoint;
+    }
+    /**
+     * attackを参照するメソッド。
+     * @return　attack モンスターの攻撃力。
+     */
+    public int getAttack(){
+        return this.attack;
+    }
+    /**
+     * deadを参照するメソッド。
+     * @return　dead モンスターの生存状況。
+     */
+    public boolean getDead(){
+        return this.dead;
+    }
+    /**
+     * nameを設定するメソッド。
+     * @param name モンスターの名前。
+     */
+    public void setName(String name){
+        this.name = name;
+    }
+    /**
+     * hitPointを設定するメソッド。
+     * @param hitPoint　モンスターのHP。
+     */
+    public void setHitPoint(int hitPoint){
+         this.hitPoint = hitPoint;
+    }
+    /**
+     * attackを設定するメソッド。
+     * @param attack　モンスターの攻撃力。
+     */
+    public void setAttack(int attack){
+         this.attack = attack;
+    }
+    /**
+     * deadを設定するメソッド。
+     * @param dead　モンスターの生存状況。
+     */
+    public void setDead(boolean dead){
+         this.dead = dead;
+    }
+
+    
     /**
      * Heroへ攻撃するメソッド。
      * attackに応じて乱数でダメージを算出し、hero.wounded()によりダメージ処理を実行。
